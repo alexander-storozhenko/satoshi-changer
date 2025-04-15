@@ -4,6 +4,11 @@
 bitcoin-ruby (master) does not support openssl3.0 because of that i used fork
 
 ### steps to run 
+- `bundle install`
+- `rackup config.ru`
+
+or via Docker
+
 - `docker compose build`
 - `docker compose up`
 
