@@ -34,12 +34,9 @@ end
 def create_signet_tx(recipient_address, send_amount)
   send_amount = to_satoshis send_amount
 
-  p "send_amount: #{send_amount}"
-
   sender_address = ENV['SENDER_ADDRESS'] || 'mvpip5o5aM8kfjF9zga4MC4GVqx4nMbJUY'
   private_key = ENV['PRIVATE_KEY'] || 'cPZzpePWADM1DBj81zb6bBkbHzA1YxFCJfq499Pnrh2XvXZbbDZE'
 
-  p sender_address
   utxos = get_utxo_details(sender_address).sort_by { |u| -u[:value] }
   raise "No UTXOs available" if utxos.empty?
 
