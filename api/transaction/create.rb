@@ -42,12 +42,8 @@ module API
           break { err: "#{recipient_address} addr type is unsupported" }
         end
 
-        p symbol
         response = get_exchange_rate(symbol)
-        p response
         symbol_amount = amount.to_f / response['price'].to_f
-
-        p recipient_address
 
         tx = create_signet_tx(recipient_address, symbol_amount)
 
