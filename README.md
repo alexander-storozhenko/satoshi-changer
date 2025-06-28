@@ -1,4 +1,4 @@
-# HODLHODL test backend 
+# Satoshi changer | Demo
 
 ### pt.2 without admin panel and supported only `p2pkh` wallet address
 bitcoin-ruby (master) does not support openssl3.0 because of that i used fork
